@@ -120,7 +120,11 @@ function MintingModal({ isActive, setIsActive }) {
       >
         <div className="flex justify-end">
           <div className="px-5 pt-5 pb-4 absolute top-0 right-0">
-            <CloseButton />
+            <CloseButton
+              onClick={() => {
+                setIsActive(false);
+              }}
+            />
           </div>
         </div>
         <p className="mb-3 mt-3 px-5 pt-4 text-xl font-extrabold text-center">

@@ -4,8 +4,7 @@ import { useAppContext } from "../../contexts/appContext";
 import styles from "./home.module.scss";
 
 function Home() {
-  // const { USDTData, transactions } = useAppContext();
-  const { isConnected } = useAppContext();
+  const { isConnected, handleWalletConnect } = useAppContext();
   const [isDisplayingModal, setIsDisplayingModal] = useState(false);
 
   return (
@@ -28,9 +27,19 @@ function Home() {
                 get yourself a BICO Ape!
               </h2>
               <div className={`${styles["get-started"]}`}>
-                <Button onClick={() => setIsDisplayingModal(true)}>
-                  Get Started!
-                </Button>
+                {isConnected ? (
+                  <Button onClick={() => setIsDisplayingModal(true)}>
+                    Get Started!
+                  </Button>
+                ) : (
+                  <Button
+                    onClick={() => {
+                      handleWalletConnect();
+                    }}
+                  >
+                    Connect Wallet!
+                  </Button>
+                )}
               </div>
             </div>
             <div></div>
