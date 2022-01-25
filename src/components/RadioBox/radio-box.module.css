@@ -1,0 +1,48 @@
+.container button {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #272728; */
+  border: 1px solid rgba(184, 186, 191, 0.2);
+  border-radius: 5px;
+}
+
+.container button.true {
+  border: none;
+  background: #000;
+}
+
+.container label {
+  cursor: pointer;
+}
+
+.container input {
+  display: none;
+}
+
+.container button .checkbox path {
+  display: none;
+}
+
+.container button.true .checkbox path {
+  display: block;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+    fill: white;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container button {
+    width: 20px;
+    height: 20px;
+  }
+}
