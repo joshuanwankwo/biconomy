@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { CheckboxIcon } from "../../assets";
 import styles from "./radio-box.module.css";
 

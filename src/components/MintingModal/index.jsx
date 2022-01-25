@@ -1,12 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { RadioBox, Wizard, CloseButton, Button } from "../../components";
+import { RadioBox, CloseButton, Button } from "../../components";
 import { useAppContext } from "../../contexts/appContext";
 import Emitter from "../../services/emitter";
-import {
-  approveTokenForSpending,
-  checkIFApproved,
-  findTokenGasPrice,
-} from "../../services/web3Service";
+import { checkIFApproved, findTokenGasPrice } from "../../services/web3Service";
 import styles from "./minting-modal.module.scss";
 import { toast } from "react-toastify";
 

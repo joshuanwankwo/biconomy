@@ -1,8 +1,6 @@
 import { ethers } from "ethers";
-import { USDTContractAddress } from "../utils";
 import { Biconomy } from "@biconomy/mexa";
-import { config } from "./config";
-import { formatEther, parseEther } from "ethers/lib/utils";
+import { parseEther } from "ethers/lib/utils";
 import { helperAttributes } from "../helpers/erc20ForwarderHelpers";
 
 const tokenAddresses = {
